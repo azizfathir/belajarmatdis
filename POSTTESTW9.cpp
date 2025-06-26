@@ -36,7 +36,6 @@ int main(){
 	cout << "Tekan Enter untuk melihat hasil generate.....";
 	cin.ignore();
 	cin.get();
-	
 	for(int i= 1; i <=n;i++){
 		for(int j = i+1; j<=n;j++){
 			if(a[i] > a[j]){
@@ -59,24 +58,23 @@ int main(){
 		if(j == 0) break;
 		
 		k = n;
-		while(a[j] > a[k])k--;
+		while(a[j] >= a[k])k--;
 		
 //		Tukar a[k] dan a[j]
-		char temp = a[k];
-		a[k] = a[j];
-		a[j] = temp;
+		char temp = a[j];
+		a[j] = a[k];
+		a[k] = temp;
 		
 		s = n;
 		r = j + 1;
-		while (r > s){
-			temp = a[r];
-			a[r] = a[s];
-			a[s] = temp;
+		while (s > r){
+			temp = a[s];
+			a[s] = a[r];
+			a[r] = temp;
 			
-			r--;
-			s++;
+			s--;
+			r++;
 		}
 	}
-	getch();
 	return 0;
 }
