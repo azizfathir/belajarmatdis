@@ -5,21 +5,16 @@ using namespace std;
 int hasil;
 
 int faktorial(int nilai){
-	hasil = nilai;
-	while(nilai > 1){
-		hasil = hasil * (nilai - 1);
-		nilai = hasil - 1;
+	int hasil = 1;
+	for(int i = 1;i <=nilai;i++){
+		hasil *= i;
 	}
 	return hasil;
 }
 int main(){
-	int p, nq, max, x, i, j, n, k, r, s, tr, no;
+	int p, nq, max, x, i, j, n, k, r, s, tr, no = 1;
 	int a[100];
 	div_t xx;
-	
-	for(i = 0; i < 100; i++){
-	a[i]=0;
-	}
 	cout << "--------------------------\n";
 	cout << "PROGRAM GENERATE PERMUTASI\n\n";
 	
